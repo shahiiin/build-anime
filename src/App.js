@@ -11,6 +11,7 @@ function App() {
 
     const resData = await res.json()
     setAnime(resData.data)
+    console.log(resData.data)
   }
   useEffect(() => {
     getData()
@@ -33,7 +34,7 @@ function App() {
         <div className="anime-row">
           <h2 className="text-heading">Anime</h2>
           <div className="row">
-            <AnimeList />
+            <AnimeList animelist={anime} />
           </div>
         </div>
       </div>
