@@ -14,9 +14,15 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <h1>Hello world!</h1>
+    <>
+     <div className="header">
+      <h1>My Anime list</h1>
+      <div className='search-box'>
+        <input type='search' placeholder='search you are anime'/>
+      </div>
     </div>
+    </>
+   
   )
 }
 
