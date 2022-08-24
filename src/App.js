@@ -34,6 +34,7 @@ function App() {
       <div className="container">
         <div className="animeInfo">
           {animeInfo && <AnimeInfo animeInfo={animeInfo}/>}
+  
         </div>
         <div className="anime-row">
           <h2 className="text-heading">Anime</h2>

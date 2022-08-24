@@ -11,7 +11,9 @@ export const AnimeInfo = (props) => {
     status,
     rating,
     duration,
-    images:{jpg:{large_image_url}}
+    images: {
+      jpg: { large_image_url },
+    },
   } = props.animeInfo
 
   return (
@@ -32,6 +34,7 @@ export const AnimeInfo = (props) => {
           <h4>Rating:{rating}</h4>
         </div>
       </div>
+      lkdnalskdjv
     </>
   )
 }

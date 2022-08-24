@@ -15,6 +15,7 @@ export const AnimeList = ({ animelist,setAnimeInfo }) => {
                   <h4>{anime.title}</h4>
                   <div className='overlay'>
                     <h4>{anime.title_japanese}</h4>
+                    <h3>SYNOPSIS</h3>
                     <div className='synopsis'>
                       <p>{anime.synopsis}</p>
                     </div>

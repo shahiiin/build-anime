@@ -117,3 +117,10 @@ body {
   padding: 1rem;
   overflow: auto;
 }
+.mylist{
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  padding: 0.5rem;
+  background-color: rgb(211, 177, 145);
+}
