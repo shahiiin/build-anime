@@ -8,11 +8,11 @@ export const AnimeList = ({ animelist }) => {
             return (
               <div className="card" key={index}>
                 <img
-                  src="https://cdn.myanimelist.net/images/anime/6/77678.jpg"
+                  src={anime.images.jpg.large_image_url}
                   alt="avatar"
                 />
                 <div className="animeInfo">
-                  <h4>Naruto</h4>
+                  <h4>{anime.title}</h4>
                 </div>
               </div>
             )
