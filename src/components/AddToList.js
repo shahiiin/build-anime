@@ -4,7 +4,7 @@ const AddToList = () => {
   return (
     <>
       <div className='mylist'>
-        <p>Add to list +</p>
+        <p>Add To List +</p>
       </div>
     </>
   )

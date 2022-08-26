@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import AddToList from './components/AddToList'
 import { AnimeInfo } from './components/AnimeInfo'
 import { AnimeList } from './components/AnimeList'
 
@@ -39,7 +40,11 @@ function App() {
         <div className="anime-row">
           <h2 className="text-heading">Anime</h2>
           <div className="row">
-            <AnimeList animelist={anime} setAnimeInfo={setAnimeInfo} />
+            <AnimeList
+             animelist={anime}
+             setAnimeInfo={setAnimeInfo}
+             animeComponent={AddToList}
+             />
           </div>
         </div>
       </div>
