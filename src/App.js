@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import AddToList from './components/AddToList'
 import { AnimeInfo } from './components/AnimeInfo'
 import { AnimeList } from './components/AnimeList'
+import { RemoveList } from './components/RemoveList'
 
 function App() {
   const [anime, setAnime] = useState('')
@@ -11,6 +12,12 @@ function App() {
 
   const addTo = (anime) => {
     const newArray = [...myAnimeList, anime]
+    setMyAnimeList(newArray)
+  }
+  const RemoveFrom =(anime)=>{
+    const newArray = myAnimeList.filter((myanime)=>{
+      return myanime.mal_id !== anime.mal_id
+    })
     setMyAnimeList(newArray)
   }
 
@@ -58,8 +65,8 @@ function App() {
             <AnimeList
               animelist={myAnimeList}
               setAnimeInfo={setAnimeInfo}
-              animeComponent={AddToList}
-              HandleList={(anime) => addTo(anime)}
+              animeComponent={RemoveList}
+              HandleList={(anime) => RemoveFrom(anime)}
             />
           </div>
         </div>
