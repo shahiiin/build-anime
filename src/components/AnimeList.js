@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const AnimeList = ({ animelist, setAnimeInfo, animeComponent }) => {
+export const AnimeList = ({ animelist, setAnimeInfo, animeComponent,HandleList }) => {
   const AddToList = animeComponent
   return (
     <>
@@ -15,7 +15,7 @@ export const AnimeList = ({ animelist, setAnimeInfo, animeComponent }) => {
                 <img src={anime.images.jpg.large_image_url} alt="avatar" />
                 <div className="animeInfo">
                   <h4>{anime.title}</h4>
-                  <div className="overlay">
+                  <div className="overlay" onClick={()=>HandleList(anime)}>
                     <h4>{anime.title_japanese}</h4>
                     <h3>SYNOPSIS</h3>
                     <div className="synopsis">

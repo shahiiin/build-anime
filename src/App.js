@@ -7,6 +7,13 @@ function App() {
   const [anime, setAnime] = useState('')
   const [search, setSearch] = useState('Naruto')
   const [animeInfo, setAnimeInfo] = useState()
+  const [myAnimeList, setMyAnimeList] = useState([])
+
+  const addTo = (anime) => {
+    const newArray = [...myAnimeList, anime]
+    setMyAnimeList(newArray)
+  }
+
   const getData = async () => {
     const res = await fetch(
       `https://api.jikan.moe/v4/anime?q=${search}&limit=30`,
@@ -34,17 +41,26 @@ function App() {
       </div>
       <div className="container">
         <div className="animeInfo">
-          {animeInfo && <AnimeInfo animeInfo={animeInfo}/>}
-  
+          {animeInfo && <AnimeInfo animeInfo={animeInfo} />}
         </div>
         <div className="anime-row">
           <h2 className="text-heading">Anime</h2>
           <div className="row">
             <AnimeList
-             animelist={anime}
-             setAnimeInfo={setAnimeInfo}
-             animeComponent={AddToList}
-             />
+              animelist={anime}
+              setAnimeInfo={setAnimeInfo}
+              animeComponent={AddToList}
+              HandleList={(anime) => addTo(anime)}
+            />
+          </div>
+          <h2 className="text-heading">My List</h2>
+          <div className="row">
+            <AnimeList
+              animelist={myAnimeList}
+              setAnimeInfo={setAnimeInfo}
+              animeComponent={AddToList}
+              HandleList={(anime) => addTo(anime)}
+            />
           </div>
         </div>
       </div>
